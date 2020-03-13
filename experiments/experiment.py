@@ -4,12 +4,11 @@
 
 import csv
 
-import numpy as np
 from flair.embeddings import BertEmbeddings
 
-from algo.embedding_util import get_word_embeddings
-from algo.flair_embeddings import get_embeddings_flair
-from algo.similarity_measures import get_cosine_similarity
+from embedding_support.embedding_util import get_word_embeddings, get_embedding_average
+from embedding_support.flair_embeddings import get_embeddings_flair
+from embedding_support.similarity_measures import get_cosine_similarity
 from data_processing.data_util import create_folder_if_not_exist
 from data_processing.preprocessor import preprocessing_flow1
 from evaluation.evaluation1 import evaluate1
@@ -18,21 +17,6 @@ from project_config import result_folder, data_folder
 
 languages = ['en']
 # languages = ('en', 'fi', 'hr', 'sl')
-
-
-# get average of given embeddings
-def get_embedding_average(emb1, emb2, chuck_size):
-    emb1_splits = np.split(emb1, chuck_size)
-    emb2_splits = np.split(emb2, chuck_size)
-    emb1_sum = np.zeros(shape=len(emb1_splits[0]))
-    for emb in emb1_splits:
-        emb1_sum = emb1_sum + emb
-    emb2_sum = np.zeros(shape=len(emb2_splits[0]))
-    for emb in emb2_splits:
-        emb2_sum = emb2_sum + emb
-    emb1_avg = emb1_sum / chuck_size
-    emb2_avg = emb2_sum / chuck_size
-    return emb1_avg, emb2_avg
 
 
 def generate_results(input_folder_path, output_folder_path, dict_language_model=None, chunk_size=None):

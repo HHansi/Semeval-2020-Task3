@@ -220,6 +220,7 @@ data
 # ignore results
 results
 results-v1
+results-v2
 
 # ignore practice notebooks
 Practice2.ipynb

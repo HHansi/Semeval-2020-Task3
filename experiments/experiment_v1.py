@@ -5,8 +5,8 @@
 import csv
 import os
 
-from algo.flair_embeddings import get_bert
-from algo.similarity_measures import get_cosine_similarity_sklearn
+from embedding_support.flair_embeddings import get_bert
+from embedding_support.similarity_measures import get_cosine_similarity_sklearn
 
 from data_processing.data_util import load_structured_data
 from evaluation.evaluation1 import evaluate1
