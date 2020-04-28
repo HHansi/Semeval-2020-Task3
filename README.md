@@ -6,7 +6,7 @@ Python 3.7 implementation <br>
 Used packages are listed in requirements.txt <br>
 
 ### Project structure
-The main experiment flow is writen in experiment.py <br> 
+The main experiment flow is writen in [experiment.py](https://github.com/HHansi/Semeval-2020-Task3/blob/master/experiments/experiment.py) <br> 
 The package breakdown is as follows;
 - data_processing - basic data pre-processing techniques and our approach to improve known data rate by named entities
 - embedding_support - all embedding generation techniques including baseline embeddings, stacked embeddings and average embeddings
