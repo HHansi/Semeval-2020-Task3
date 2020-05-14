@@ -1,9 +1,9 @@
-# Word Similarity Prediction
-## BRUMS approach on SemEval-2020 Task 3: predicting the (graded)effect of context in word similarity 
+# Graded Word Similarity in Context
+BRUMS approach for SemEval-2020 Task 3
 
 ### About
 Python 3.7 implementation <br>
-Used packages are listed in requirements.txt <br>
+Used packages are listed in [requirements.txt](https://github.com/HHansi/Semeval-2020-Task3/blob/master/requirements.txt) <br>
 
 ### Project structure
 The main experiment flow is writen in [experiment.py](https://github.com/HHansi/Semeval-2020-Task3/blob/master/experiments/experiment.py) <br> 
